@@ -1,0 +1,22 @@
+{% include 'navbar.html' %}
+
+{% block content %}
+  <div class="container mt-5">
+    <h1>Welcome to Email Sender</h1>
+    <p>This is a Testing purpose apk</p>
+  </div>
+  <div>
+    <a class=" btn btn-primary" href="{% url 'send_email' %}">Send Email</a>
+    <a class=" btn btn-secondary"href="#">View Email</a>
+  </div>
+
+  <script>
+    // Check if the alert message exists
+    {% if alert_message %}
+        // Display the alert message using JavaScript
+        alert("{{ alert_message }}");
+    {% endif %}
+    </script>
+{% endblock %}
+
+
